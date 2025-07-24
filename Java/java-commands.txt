@@ -1,0 +1,13 @@
+    to compile and store .class files in seperate folder
+
+javac -d <folder-of-classfiles> <filename>.java
+    javac -d classfiles helloworld.java
+
+java -cp <folder-of-classfiles> <folder>.java
+
+    java -cp classfiles helloworld
+
+    ------ Having Package -- >>> Compile Same --->>>  Run like
+    java -cp <folder-of-classfiles> <package-name>.<filename>
+    
+        java -cp classfiles Abstraction.Abstraction

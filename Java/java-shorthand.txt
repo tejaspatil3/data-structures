@@ -1,0 +1,96 @@
+// 1. Lambda Expressions (Instead of Anonymous Classes)
+interface MathOperation {
+    int operation(int a, int b);
+}
+MathOperation addition = (a, b) -> a + b;
+// Instead of:
+// MathOperation addition = new MathOperation() {
+//     public int operation(int a, int b) {
+//         return a + b;
+//     }
+// };
+
+// 2. Type Inference with var (Instead of Explicit Type Declaration)
+var list = new ArrayList<String>();
+// Instead of: ArrayList<String> list = new ArrayList<>();
+
+// 3. Ternary Operator (Instead of if-else statements)
+String status = (age >= 18) ? "Adult" : "Minor";
+// Instead of:
+// String status;
+// if (age >= 18) {
+//     status = "Adult";
+// } else {
+//     status = "Minor";
+// }
+
+// 4. try-with-resources (Instead of manual resource closing)
+try (BufferedReader br = new BufferedReader(new FileReader("file.txt"))) {
+    System.out.println(br.readLine());
+} 
+// Instead of:
+// BufferedReader br = new BufferedReader(new FileReader("file.txt"));
+// try {
+//     System.out.println(br.readLine());
+// } finally {
+//     br.close();
+// }
+
+// 5. Enhanced for-loop (Instead of traditional for-loop)
+for (String item : list) {
+    System.out.println(item);
+}
+// Instead of:
+// for (int i = 0; i < list.size(); i++) {
+//     System.out.println(list.get(i));
+// }
+
+// 6. Streams API (Instead of loops for collections)
+list.stream().forEach(System.out::println);
+// Instead of using a loop
+
+// 7. Optional (Instead of null checks)
+Optional<String> name = Optional.ofNullable(user.getName());
+// Instead of:
+// if (user.getName() != null) {
+//     return user.getName();
+// } else {
+//     return "Guest";
+// }
+
+// 8. Switch Expressions (Instead of traditional switch-case)
+String result = switch (day) {
+    case "Monday", "Tuesday" -> "Weekday";
+    case "Saturday", "Sunday" -> "Weekend";
+    default -> "Unknown";
+};
+// Instead of:
+// switch (day) {
+//     case "Monday": case "Tuesday":
+//         result = "Weekday";
+//         break;
+//     case "Saturday": case "Sunday":
+//         result = "Weekend";
+//         break;
+//     default:
+//         result = "Unknown";
+// }
+
+// 9. Records (Instead of boilerplate POJO classes)
+record Person(String name, int age) {}
+// Instead of:
+// public class Person {
+//     private String name;
+//     private int age;
+//     public Person(String name, int age) {
+//         this.name = name;
+//         this.age = age;
+//     }
+//     public String getName() { return name; }
+//     public int getAge() { return age; }
+// }
+
+// 10. String join (Instead of manual concatenation)
+String names = String.join(", ", "Alice", "Bob", "Charlie");
+// Instead of:
+// String names = "Alice" + ", " + "Bob" + ", " + "Charlie";

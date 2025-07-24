@@ -1,0 +1,9 @@
+seperate .java and .class files 
+
+to compile javac -d <folderName to save .class files> <filesName to be compiled>
+
+-----------------    javac -d classfiles arrays.java
+
+to run after compilation -- java -cp <folderName containing .class files> <Name of Class containing main function or fileName>
+
+------------------    java -cp classfiles arrays

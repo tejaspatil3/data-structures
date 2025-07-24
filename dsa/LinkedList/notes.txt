@@ -1,0 +1,16 @@
+making
+
+push_front
+
+push_back
+
+
+printing linked list
+
+  Node temp_head = list1.begin();
+        while(temp_head != null){
+            System.out.print(temp_head.getData() + "->");
+            temp_head = temp_head.next;
+        }
+
+insert
