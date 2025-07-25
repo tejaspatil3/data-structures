@@ -65,18 +65,22 @@ class LinkedList{
     }
     // liner search -- memory not continous direct access is not possible
     public boolean search_list(Node head, int key){
-        // int idx;
+        int idx = 0 ;
         Node temp = head;
         while(temp!= null){
             if(temp.data == key){
+                idx ++;
+                System.out.println(idx);
                 return true;
             }
             else{
+                idx++;
                 temp = temp.next;
             }
         }
         return false;
     }
+
     //recursive search
     public int resursiveSearch(Node head, int key){
         int idx = searchHelper(head, key);
@@ -171,7 +175,6 @@ class LinkedList{
         }
     }
 
-    
     public Node reverseLinkedList(Node temp_head12){
         Node current = temp_head12;
         Node prev = null;
@@ -185,12 +188,12 @@ class LinkedList{
             current = temp;
             // System.out.println(current.data);
         }
+        head = current;
         current.next = prev;
         // System.out.println(current.data);
         // System.out.println(current.next);
         return current;
     }
-
 
 };
 
@@ -216,22 +219,13 @@ public class linkedList_All{
 
         // print_list();
         Node temp_head = list1.begin();
-
         print_linked_list(temp_head);
 
-        // while(temp_head != null){
-        //     System.out.print(temp_head.getData() + "->");
-        //     temp_head = temp_head.next;
-        // }
         // System.out.println();
 
-        // No output as head is local to main
-        // // Node temp_head = list1.begin();
-        // while(head != null){
-        //     System.out.print(temp_head.getData() + "->");
-        //     temp_head = temp_head.next;
-        // }
-        // 
+        // // No output as head is local to main
+        // Node temp_head = list1.begin();
+        // print_linked_list(temp_head);
 
         // System.err.println();
 
@@ -244,12 +238,9 @@ public class linkedList_All{
 
         // //Print list
         // Node temp_head2 = list1.begin();
-        // while(temp_head2 != null){
-        //     System.out.print(temp_head2.getData() + "->");
-        //     temp_head2 = temp_head2.next;
-        // }
+        // print_linked_list(temp_head2);
 
-        // System.out.println();
+        System.out.println();
 
         // Node temp_head3 = list1.begin();
         // int key1 = 13;
@@ -277,19 +268,16 @@ public class linkedList_All{
 
         // //original
         // Node temp_head8 = list1.begin();
-        // while(temp_head8 != null){
-        //     System.out.print(temp_head8.getData() + "->");
-        //     temp_head8 = temp_head8.next;
-        // }
+        // print_linked_list(temp_head8);
 
         // System.out.println();
         
         // //pop fornt
         // Node temp_head6 = list1.begin();
-        // System.out.println(temp_head6.data);
+        // // System.out.println(temp_head6.data);
         // // System.out.println(temp_head6.next);
 
-        // // System.out.println();
+        // System.out.println();
 
         // list1.pop_front();
 
@@ -316,25 +304,27 @@ public class linkedList_All{
         // Node temp_head11 = list1.begin();
         // print_linked_list(temp_head11);
 
-        //  System.out.println();
+        // System.out.println();
 
         // list1.removeNodeByValue(11);
         // Node temp_head11 = list1.begin();
         // print_linked_list(temp_head);
 
-        System.out.println();
-        Node temp_head12 = list1.head;
+        // System.out.println();
+        // Node temp_head12 = list1.head;
 
-        temp_head12 = list1.reverseLinkedList(temp_head12);
-        System.out.println("Linked List Reversed");
+        // temp_head12 = list1.reverseLinkedList(temp_head12);
+        // System.out.println("Linked List Reversed");
 
         // list1.reverseLinkedList(temp_head12);
         // temp_head12 = list1.head;
         // System.out.println(list1.head);
         // System.out.println(temp_head12);
 
-        // print list
-        print_linked_list(temp_head12);
+        // temp_head12 = list1.head;
+
+        // // print list
+        // print_linked_list(temp_head12);
  
     }
 };

@@ -63,8 +63,6 @@ public class coding_excersise_1_deleteTail {
 
         list1.deleteTail(temp_head);
 
-
-
     }
     
 }
