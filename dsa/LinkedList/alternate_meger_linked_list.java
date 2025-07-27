@@ -103,8 +103,8 @@ public class alternate_meger_linked_list {
         list1.push_front(13);
         list1.push_front(12);
         list1.push_front(11);
-        list1.push_front(10);
-        list1.push_front(9);
+        // list1.push_front(10);
+        // list1.push_front(9);
 
         //printlist
         Node temp_head = list1.head;
