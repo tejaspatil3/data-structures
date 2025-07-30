@@ -31,6 +31,6 @@ class Maximum_matching_of_players_with_trainers{
         int[] players = {4,7,9};
         int[] trainers = {8,2,5,8};
 
-        System.out.println(Maximum_matching_of_players_with_trainers(players,trainers));
+        System.out.println(matchPlayersAndTrainers(players,trainers));
     }
 };

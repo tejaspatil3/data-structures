@@ -81,8 +81,8 @@ public class question_2 {
         Node nodel = new Node(10);
         Node node2 = new Node(20);
         nodel.next = node2;
-        increment(list1.node1);
-        print(list1.node1);
+        // increment(list1.node1);
+        // print(list1.node1);
 
         
     }
