@@ -133,6 +133,7 @@ class HashTable<T> {
         }
         System.out.println("--------------------\n");
     }
+    //search
     public T searchHashTable(String key){
         int idx = hashFunction(key);
         Node<T> temp = table[idx];
@@ -145,6 +146,27 @@ class HashTable<T> {
         }
         return null;
     }
+    //Erase if exist
+    public void eraseFromHashTable(String Key){
+        Node<T> newNode = null;
+        int idx = hashFunction(Key);
+        Node<T> temp = table[idx];
+        if(temp == null){
+            System.out.println("Not found");
+        }
+        while(temp != null){
+            if(temp.key == Key ){
+                if(newNode != null){
+                    newNode.next = temp.next;
+                }else{
+                    table[idx] = temp.next;
+                } 
+            }
+            newNode = temp;
+            temp = temp.next;
+        }
+    }
+    //operater overloading
 
 };
 
@@ -173,5 +195,14 @@ public class HashTable_Good {
         priceMenu.print();
         String key = "Grape";
         System.out.println("Price of "+ key+" = "+priceMenu.searchHashTable(key));
+
+        // key = "Mango";
+        // priceMenu.eraseFromHashTable(key);
+        // priceMenu.print();
+
+        key = "Grape";
+        priceMenu.eraseFromHashTable(key);
+        priceMenu.print();
+        
     }
 }
