@@ -22,8 +22,8 @@ public class test {
         // System.out.println("x = "+x);
         // System.out.println("y = "+y);
 
-        float x = 1.0;
-        float y = 2.0;
+        float x = (float) 1.0;
+        float y = (float) 2.0;
         // float z = x + y;
         // System.out.println("z= "+z);
         System.out.println("x = "+x);
