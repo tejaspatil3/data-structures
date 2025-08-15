@@ -1,0 +1,61 @@
+Queue Data Structure
+
+A Queue Data Structure is a fundamental concept in computer science used for storing and managing data in a specific order.
+
+It follows the principle of "First in, First out" (FIFO), where the first element added to the queue is the first one to be removed.
+It is used as a buffer in computer systems where we have speed mismatch between two devices that communicate with each other. For example, CPU and keyboard and two devices in a network
+Queue is also used in Operating System algorithms like CPU Scheduling and Memory Management, and many standard algorithms like Breadth First Search of Graph, Level Order Traversal of a Tree.
+
+FIFO Order – Elements are processed in the order they were inserted (First-In-First-Out).
+No Random Access – Unlike List, elements cannot be accessed directly by index.
+Multiple Variants – Includes PriorityQueue, Deque, ArrayDeque, and LinkedList implementations.
+Two Sets of Methods – Throws-exception versions (add, remove, element) and safe versions (offer, poll, peek).
+
+Declaration of Java Queue Interface
+The Queue interface is declared as:
+
+public interface Queue extends Collection
+
+We cannot instantiate a Queue directly as it is an interface. Here, we can use a class like LinkedList or PriorityQueue that implements this interface.
+
+Queue<Obj> queue = new LinkedList<Obj>();
+
+import java.util.LinkedList;
+import java.util.Queue;
+
+public class Geeks {
+    
+  	public static void main(String args[]) 
+    {
+        // Create a Queue of Integers using LinkedList
+        Queue<Integer> q = new LinkedList<>();
+        
+        System.out.println("Queue elements: " + q);
+    }
+}
+
+Being an interface the queue needs a concrete class for the declaration and the most common classes are the PriorityQueue and LinkedList in Java. Note that neither of these implementations is thread-safe. PriorityBlockingQueue is one alternative implementation if the thread-safe implementation is needed.
+
+Creating Queue Objects
+Queue is an interface, so objects cannot be created of the type queue. We always need a class which extends this list in order to create an object. And also, after the introduction of Generics in Java 1.5, it is possible to restrict the type of object that can be stored in the Queue. This type-safe queue can be defined as:
+
+// Obj is the type of the object to be stored in Queue
+Queue<Obj> queue = new PriorityQueue<Obj> ();
+
+Common Methods
+The Queue interface provides several methods for adding, removing, and inspecting elements in the queue. Here are some of the most commonly used methods:
+
+add(element): Adds an element to the rear of the queue. If the queue is full, it throws an exception.
+offer(element): Adds an element to the rear of the queue. If the queue is full, it returns false.
+remove(): Removes and returns the element at the front of the queue. If the queue is empty, it throws an exception.
+poll(): Removes and returns the element at the front of the queue. If the queue is empty, it returns null.
+element(): Returns the element at the front of the queue without removing it. If the queue is empty, it throws an exception.
+peek(): Returns the element at the front of the queue without removing it. If the queue is empty, it returns null.
+
+1. PriorityQueue
+PriorityQueue class lets us process elements based on their priority instead of the usual FIFO order of a normal queue. It’s useful when elements must be handled in priority order. Here’s how we can create a queue using this class.
+
+priority queue stores the data on oriority bases    
+
+2.. LinkedList
+LinkedList is a linear data structure where elements are stored as separate objects, each containing data and a link to the next element. The elements are connected using pointers, not stored in continuous memory. Here’s how we can create a queue using this class.

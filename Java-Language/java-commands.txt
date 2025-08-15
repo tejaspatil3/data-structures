@@ -11,3 +11,20 @@ java -cp <folder-of-classfiles> <folder>.java
     java -cp <folder-of-classfiles> <package-name>.<filename>
     
         java -cp classfiles Abstraction.Abstraction
+
+java <filename>.java
+        runs the java file directly without creating class files
+
+java file name has to be same as of the public class name
+
+file_name = helo_world
+
+public class helo_world{
+    //  the main method in the code has to be public to allow JVM to be able to access the main method form outside the class to start program execution 
+
+    public static void main(String[] args){
+        //code
+    }
+}
+
+we can name the java file anything if it does not have a public class
